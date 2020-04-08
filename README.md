@@ -10,6 +10,7 @@ Extract reads from a 250bp window of the breakpoint including mates of the disco
 
 
 Sample BAMID file
+
 	LP6005441-DNA_A01	LP6005441-DNA_A01.38.sorted.bam
 	LP6005441-DNA_A03	LP6005441-DNA_A03.38.sorted.bam
 	LP6005441-DNA_A04	LP6005441-DNA_A04.38.sorted.bam
@@ -17,6 +18,7 @@ Sample BAMID file
 	
 Sample input file (without header):
 	BAMID				uniqueid		chr		breakpoint TE	strand(optional) TSD(optional)
+	
 	LP6005441-DNA_A01	chr1_1564206	chr1	1564206	AluY	+	AAGAATACTC
 	LP6005441-DNA_A03	chr1_1564206	chr1	1564206	AluY	+	AAGAATACTC
 	LP6005441-DNA_A04	chr1_1564206	chr1	1564206	AluY	+	AAGAATACTC
@@ -38,6 +40,7 @@ Create a folder named e.g TEsequences and copy consensus AluY sequences (see sam
 	perl 04_orientTE_extractTE_v12.6.pl -g /path/to/outputfolder/ExtractGenomicsequences -t /path/to/TEsequences -ds /path/to/outputfolder/Discosplitassembly -dc /path/to/outputfolder/Discoassembly -d /path/to/outputfolder/orientTE -fl /path/to/list_locations.txt -l /path/to/position_TE.txt -bp /path/to/localBlast -cp /path/to/CAP3 -sp /path/to/SPAdes-3.11.1-Linux/bin -mn /path/to/minia-v2.0.7-Source/build/bin -cu numberofcpus -p /path/to/output 
 
 sample list_locations.txt (used only if the locations the in the list are to be analysed)
+
 	chr10:116369944-116370444
 	chr10:13533871-13534371
 	chr10:23579915-23580415
