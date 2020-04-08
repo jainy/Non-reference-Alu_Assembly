@@ -22,7 +22,7 @@ use feature 'fc';
 use MIME::Lite;
 
 
-my $version = "12.5";
+my $version = "12.6";
 my $scriptname = "orientTE_extractTE.pl";
 my $changelog = "
 #   - v1.0 = 3 November 2017 
