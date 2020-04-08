@@ -27,6 +27,7 @@ Sample input file (without header):
 	LP6005441-DNA_A05	chr1_2564285	chr1	2564285	AluY	+	AGAAGCGGTG
 
 "Parallel"(https://www.gnu.org/software/parallel/) can be used to total decrease time taken for step1. The input file can be split into multiple files and move to a directory (Lets call it "inputdir"). While splitting the input file, have all the candidates from all individual in a single file.  Make a list of input files (call it "list_of_infputfiles"). Now cd inputdir and launch the following command. -j can be changed as per the number of the input files and number of CPUs available.
+
 	cat ../list_of_inputfiles.txt | nohup /usr/bin/parallel -j 4 --results /path/to/stderr 'perl 01_processbam_forreadextract_v18.0.pl -t /path/to/BAMID.txt -f {} -p /path/to/outputfolder -bl /path/to/BAMfiles -g /path/to/referencegenome.fa -pt /path/to/picardtools -sq /path/to/seqtk -bu /path/to/bamUtil -bt /path/to/bedtools2/bin' &
 
 Step 2:
