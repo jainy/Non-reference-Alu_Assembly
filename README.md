@@ -71,10 +71,12 @@ Assembled_TEsequences.12.6.txt.full_len.fasta.all (containing full length Alu se
 
 Assembled_TEsequences.12.6.txt.partial.fasta.all (containing partial Alu sequences assembled constructed using all reads mapped to that location including mates of discordant reads)
 
+
+
 A summary file is generated that picks the full length Alu sequences and the longest partial Alu sequences from all three methods:
 
-Assembled_TEsequences.12.6.txt.full_len.fasta.summary
-Assembled_TEsequences.12.6.txt.partial.fasta.summary
+	Assembled_TEsequences.12.6.txt.full_len.fasta.summary
+	Assembled_TEsequences.12.6.txt.partial.fasta.summary
 
 
 
