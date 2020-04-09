@@ -173,7 +173,7 @@ $teout = "Assembled_TEsequences.$version.txt" if (! $teout);
 #my $miniapro = "/home/jainy/software/minia-v2.0.7-Source/build/bin";
 #my $SPAdepro = "/home/jainy/software/SPAdes-3.11.1-Linux/bin";#vaderserver,Yodaserver
 
-#-d "$path/Assembled_TEreads"?die "$path/Assembled_TEreads already exist? please delete/rename the existing folder\n":make_path ("$path/Assembled_TEreads");
+-d "$path/Assembled_TEreads"?die "$path/Assembled_TEreads already exist? please delete/rename the existing folder\n":make_path ("$path/Assembled_TEreads");
 my $genomloc;
 my $directory;
 my @zerofiles;
