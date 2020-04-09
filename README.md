@@ -42,7 +42,7 @@ denovo assembly of reads, identify the Alu sequence and extract the assembled se
 Create a folder named e.g TEsequences and copy consensus AluY sequences (see sample_files). The consensus AluY sequences is used to identify homologous AluY sequences from the assembled contigs
 
 
-	perl 04_orientTE_extractTE_v12.6.pl -g /path/to/outputfolder/ExtractGenomicsequences -t /path/to/TEsequences -ds /path/to/outputfolder/Discosplitassembly -dc /path/to/outputfolder/Discoassembly -d /path/to/outputfolder/orientTE -fl /path/to/list_locations.txt -l /path/to/position_TE.txt -bp /path/to/localBlast -cp /path/to/CAP3 -sp /path/to/SPAdes-3.11.1-Linux/bin -mn /path/to/minia-v2.0.7-Source/build/bin -cu numberofcpus -p /path/to/output 
+	perl 02_orientTE_extractTE_v12.6.pl -g /path/to/outputfolder/ExtractGenomicsequences -t /path/to/TEsequences -ds /path/to/outputfolder/Discosplitassembly -dc /path/to/outputfolder/Discoassembly -d /path/to/outputfolder/orientTE -fl /path/to/list_locations.txt -l /path/to/position_TE.txt -bp /path/to/localBlast -cp /path/to/CAP3 -sp /path/to/SPAdes-3.11.1-Linux/bin -mn /path/to/minia-v2.0.7-Source/build/bin -cu numberofcpus -p /path/to/output 
 
 sample list_locations.txt (used only if the locations the in the list are to be analysed)
 
