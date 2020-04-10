@@ -173,7 +173,7 @@ $teout = "Assembled_TEsequences.$version.txt" if (! $teout);
 #my $miniapro = "/home/jainy/software/minia-v2.0.7-Source/build/bin";
 #my $SPAdepro = "/home/jainy/software/SPAdes-3.11.1-Linux/bin";#vaderserver,Yodaserver
 
--d "$path/Assembled_TEreads"?die "$path/Assembled_TEreads already exist? please delete/rename the existing folder\n":make_path ("$path/Assembled_TEreads");
+#-d "$path/Assembled_TEreads"?die "$path/Assembled_TEreads already exist? please delete/rename the existing folder\n":make_path ("$path/Assembled_TEreads");
 my $genomloc;
 my $directory;
 my @zerofiles;
@@ -720,8 +720,12 @@ if ($discdir) {
 			#}	
 			if (-e "$path/Assembled_DCreads/$gedcdir/$gedcdir.concate.disreadsmates.fasta.cap.contigs") {
 				my $assembledfile = "$gedcdir.concate.disreadsmates.fasta.cap.contigs";
+				
 				&renameseq_filename($assembledfile,$dpath,$gedcdir,"cap");
+			} else {
+				print "No assembly detected for $gedcdir\n"
 			}
+			
 			
 			&blast_file ($TEdir,"$queryte.fasta",$gedcdir,$dpath,"cap");	#blast with the query TEsequence
 			#print STDERR "the query is $TEdir/$queryte.fasta\n";
@@ -739,6 +743,7 @@ if ($discdir) {
 			#print Dumper %$genomeblast;
 			#predict the orientation of TE insertion
 			&compare_twoHOH($gedcdir,$TEblast,$genomeblast);
+			
 	
 		} elsif ($readcount >= 100) {
 			#unless ($present ==1 ){
