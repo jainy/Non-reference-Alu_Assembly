@@ -718,7 +718,8 @@ if ($discdir) {
 			#unless ($present ==1 ){
 			system ("$CAP3dir/cap3 $path/Assembled_DCreads/$gedcdir/$gedcdir.concate.disreadsmates.fasta > $path/Assembled_DCreads/$gedcdir/$gedcdir.concate.disreadsmates.asmbl.fasta") == 0 or warn ("unable to assemble fasta $directory \n");
 			#}	
-			if (-e "$path/Assembled_DCreads/$gedcdir/$gedcdir.concate.disreadsmates.fasta.cap.contigs") {
+			#my $filesize_1 = -s "$path/Assembled_DCreads/$gedcdir/$gedcdir.concate.disreadsmates.fasta.cap.contigs"
+			if (-e "$path/Assembled_DCreads/$gedcdir/$gedcdir.concate.disreadsmates.fasta.cap.contigs")   {
 				my $assembledfile = "$gedcdir.concate.disreadsmates.fasta.cap.contigs";
 				
 				&renameseq_filename($assembledfile,$dpath,$gedcdir,"cap");
