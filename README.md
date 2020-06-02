@@ -1,5 +1,5 @@
 # Non-reference-Alu_Assembly
- Assemble non-reference Alu insertions when breakpoints are provided
+ Generate a consenus sequence of non-reference Alu insertions from multiple individuals when breakpoints are provided
 
 
 Usage:
